@@ -13,16 +13,16 @@ namespace Hancock_RoboDialer_Project
                 "Hazard Comm Specialists", "2", "(714) 472-4409", "Komfort Support", "2" };
 
             Phone[] rolodex = new Phone[10];
-            int d = -1;
+            int rolodexIndex = -1;
             for (int i = 0; i < contactList.Length; i += 3)
             {
-                d++;
+                rolodexIndex++;
                 if (contactList[i + 2] == "1")
-                    rolodex[d] = new HomePhone(contactList[i], contactList[i + 1], contactList[i + 2]);
+                    rolodex[rolodexIndex] = new HomePhone(contactList[i], contactList[i + 1], contactList[i + 2]);
 
                 else
                 {
-                    rolodex[d] = new CellPhone(contactList[i], contactList[i + 1], contactList[i + 2]);
+                    rolodex[rolodexIndex] = new CellPhone(contactList[i], contactList[i + 1], contactList[i + 2]);
                 }
             }
 

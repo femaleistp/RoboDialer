@@ -5,19 +5,19 @@
         string[] _phoneNumber = new string[10];
         string[] _companyName = new string[10];
         string[] _phoneType = new string[10];
-        int c = -1; //_contactCount
+        int contactIndex = -1;
 
         public Phone(string PhoneNumber, string CompanyName, string PhoneType)
         {
-            c++;
-            _phoneNumber[c] = PhoneNumber;
-            _companyName[c] = CompanyName;
-            _phoneType[c] = PhoneType;
+            contactIndex++;
+            _phoneNumber[contactIndex] = PhoneNumber;
+            _companyName[contactIndex] = CompanyName;
+            _phoneType[contactIndex] = PhoneType;
         }
 
         public virtual string Dial()
         {
-            return _companyName[c] + " is being dialed using " + _phoneNumber[c] + "...";
+            return _companyName[contactIndex] + " is being dialed using " + _phoneNumber[contactIndex] + "...";
         }
     }
 }

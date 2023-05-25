@@ -10,7 +10,7 @@
 
         public override string Dial()
         {
-            return base.Dial();
+            return base.Dial().Replace(" using ", " using 1+");
         }
     }
 }
